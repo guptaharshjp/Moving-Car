@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sky{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-image: url(image/background.jpg);
+    background-repeat: no-repeat;
+}
+.trees{
+    height: 100vh;
+    width: 100%;
+    background-image: url(image/trees.png);
+    background-size: cover;
+    position: absolute;
+    top: -144px;
+    animation: Shake linear 6s infinite;
+}
+.track{
+    height: 60vh;
+    width: 800vw;
+    background-image: url(image/track.png);
+    position: absolute; 
+    /* ek mein krne ke liye position absolute */
+    /* Neeche krne ke liye
+     */
+     top: 70vh;
+     background-repeat: repeat-x;
+     animation: CarMove linear 8s infinite;
+
+}
+.car{
+    height: 100px;
+    width: 380px;
+    background-image: url(image/car_body.png);
+    background-size:cover ;
+    background-repeat: repeat-x;
+    position: absolute;
+    left: 444px;
+    bottom: 30vh ;
+    animation: CarShake linear 3s infinite;
+}
+
+.wheel1 img{
+ width: 75px;
+ position: relative;
+ top: 40px;
+ left: 42px;
+ animation: wheelRotation linear .6s infinite;
+}
+/* scrool bar hatane ke liye */
+body{
+    overflow: hidden;
+}
+.wheel2 img{
+    width: 77px;
+    position: relative;
+    top: -39px;
+    left: 235px;
+    animation: wheelRotation linear .6s infinite;
+}
+
+@keyframes wheelRotation{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes CarMove{
+    100%{
+        transform: translatex(-500vw);
+    }
+}
+@keyframes CarShake{
+    0%{
+        transform: translatey(-5px);
+    }
+    50%{
+        transform: translatey(5px);
+    }
+    100%{
+        transform: translatey(-5px);
+    }
+}
+@keyframes Shake{
+    0%{
+        transform: translatey(-25px);
+    }
+    50%{
+        transform: translatey(25px);
+    }
+    100%{
+        transform: translatey(-25px);
+    }
+}
